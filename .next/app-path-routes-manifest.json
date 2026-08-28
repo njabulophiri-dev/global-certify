@@ -1,0 +1,13 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/about/page": "/about",
+  "/contact/page": "/contact",
+  "/faq/page": "/faq",
+  "/page": "/",
+  "/scholarships/page": "/scholarships",
+  "/services/page": "/services",
+  "/student-support/page": "/student-support",
+  "/team/page": "/team",
+  "/why-russia/page": "/why-russia"
+}

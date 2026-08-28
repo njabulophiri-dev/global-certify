@@ -1,0 +1,122 @@
+[
+  {
+    "route": "/",
+    "firstLoadUncompressedJsBytes": 465297,
+    "firstLoadChunkPaths": [
+      ".next/static/chunks/1wslq2sk50gbn.js",
+      ".next/static/chunks/310vm2bl3xxpt.js",
+      ".next/static/chunks/1z3a_gaxkq-fd.js",
+      ".next/static/chunks/0cnll8wiha65o.js",
+      ".next/static/chunks/1pqz1zxz4my2o.js",
+      ".next/static/chunks/turbopack-2y3d72zajcd_d.js"
+    ]
+  },
+  {
+    "route": "/_not-found",
+    "firstLoadUncompressedJsBytes": 465297,
+    "firstLoadChunkPaths": [
+      ".next/static/chunks/1wslq2sk50gbn.js",
+      ".next/static/chunks/310vm2bl3xxpt.js",
+      ".next/static/chunks/1z3a_gaxkq-fd.js",
+      ".next/static/chunks/0cnll8wiha65o.js",
+      ".next/static/chunks/1pqz1zxz4my2o.js",
+      ".next/static/chunks/turbopack-2y3d72zajcd_d.js"
+    ]
+  },
+  {
+    "route": "/about",
+    "firstLoadUncompressedJsBytes": 465297,
+    "firstLoadChunkPaths": [
+      ".next/static/chunks/1wslq2sk50gbn.js",
+      ".next/static/chunks/310vm2bl3xxpt.js",
+      ".next/static/chunks/1z3a_gaxkq-fd.js",
+      ".next/static/chunks/0cnll8wiha65o.js",
+      ".next/static/chunks/1pqz1zxz4my2o.js",
+      ".next/static/chunks/turbopack-2y3d72zajcd_d.js"
+    ]
+  },
+  {
+    "route": "/contact",
+    "firstLoadUncompressedJsBytes": 465297,
+    "firstLoadChunkPaths": [
+      ".next/static/chunks/1wslq2sk50gbn.js",
+      ".next/static/chunks/310vm2bl3xxpt.js",
+      ".next/static/chunks/1z3a_gaxkq-fd.js",
+      ".next/static/chunks/0cnll8wiha65o.js",
+      ".next/static/chunks/1pqz1zxz4my2o.js",
+      ".next/static/chunks/turbopack-2y3d72zajcd_d.js"
+    ]
+  },
+  {
+    "route": "/faq",
+    "firstLoadUncompressedJsBytes": 465297,
+    "firstLoadChunkPaths": [
+      ".next/static/chunks/1wslq2sk50gbn.js",
+      ".next/static/chunks/310vm2bl3xxpt.js",
+      ".next/static/chunks/1z3a_gaxkq-fd.js",
+      ".next/static/chunks/0cnll8wiha65o.js",
+      ".next/static/chunks/1pqz1zxz4my2o.js",
+      ".next/static/chunks/turbopack-2y3d72zajcd_d.js"
+    ]
+  },
+  {
+    "route": "/scholarships",
+    "firstLoadUncompressedJsBytes": 465297,
+    "firstLoadChunkPaths": [
+      ".next/static/chunks/1wslq2sk50gbn.js",
+      ".next/static/chunks/310vm2bl3xxpt.js",
+      ".next/static/chunks/1z3a_gaxkq-fd.js",
+      ".next/static/chunks/0cnll8wiha65o.js",
+      ".next/static/chunks/1pqz1zxz4my2o.js",
+      ".next/static/chunks/turbopack-2y3d72zajcd_d.js"
+    ]
+  },
+  {
+    "route": "/services",
+    "firstLoadUncompressedJsBytes": 465297,
+    "firstLoadChunkPaths": [
+      ".next/static/chunks/1wslq2sk50gbn.js",
+      ".next/static/chunks/310vm2bl3xxpt.js",
+      ".next/static/chunks/1z3a_gaxkq-fd.js",
+      ".next/static/chunks/0cnll8wiha65o.js",
+      ".next/static/chunks/1pqz1zxz4my2o.js",
+      ".next/static/chunks/turbopack-2y3d72zajcd_d.js"
+    ]
+  },
+  {
+    "route": "/student-support",
+    "firstLoadUncompressedJsBytes": 465297,
+    "firstLoadChunkPaths": [
+      ".next/static/chunks/1wslq2sk50gbn.js",
+      ".next/static/chunks/310vm2bl3xxpt.js",
+      ".next/static/chunks/1z3a_gaxkq-fd.js",
+      ".next/static/chunks/0cnll8wiha65o.js",
+      ".next/static/chunks/1pqz1zxz4my2o.js",
+      ".next/static/chunks/turbopack-2y3d72zajcd_d.js"
+    ]
+  },
+  {
+    "route": "/team",
+    "firstLoadUncompressedJsBytes": 465297,
+    "firstLoadChunkPaths": [
+      ".next/static/chunks/1wslq2sk50gbn.js",
+      ".next/static/chunks/310vm2bl3xxpt.js",
+      ".next/static/chunks/1z3a_gaxkq-fd.js",
+      ".next/static/chunks/0cnll8wiha65o.js",
+      ".next/static/chunks/1pqz1zxz4my2o.js",
+      ".next/static/chunks/turbopack-2y3d72zajcd_d.js"
+    ]
+  },
+  {
+    "route": "/why-russia",
+    "firstLoadUncompressedJsBytes": 465297,
+    "firstLoadChunkPaths": [
+      ".next/static/chunks/1wslq2sk50gbn.js",
+      ".next/static/chunks/310vm2bl3xxpt.js",
+      ".next/static/chunks/1z3a_gaxkq-fd.js",
+      ".next/static/chunks/0cnll8wiha65o.js",
+      ".next/static/chunks/1pqz1zxz4my2o.js",
+      ".next/static/chunks/turbopack-2y3d72zajcd_d.js"
+    ]
+  }
+]
