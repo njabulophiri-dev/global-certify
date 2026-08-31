@@ -1,23 +1,24 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
-import { Menu, X, Globe } from 'lucide-react'
+import { useState } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { Menu, X, Globe } from "lucide-react";
 
 const navLinks = [
-  { href: '/about', label: 'About Us' },
-  { href: '/why-russia', label: 'Why Russia' },
-  { href: '/services', label: 'Services' },
-  { href: '/scholarships', label: 'Scholarships' },
-  { href: '/team', label: 'Team' },
-  { href: '/student-support', label: 'Student Support' },
-  { href: '/contact', label: 'Contact' },
-]
+  { href: "/about", label: "About Us" },
+  { href: "/why-russia", label: "Why Russia" },
+  { href: "/services", label: "Services" },
+  { href: "/pricing", label: "Pricing" },
+  { href: "/scholarships", label: "Scholarships" },
+  { href: "/team", label: "Team" },
+  { href: "/student-support", label: "Student Support" },
+  { href: "/contact", label: "Contact" },
+];
 
 export default function Navbar() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const pathname = usePathname()
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <header className="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-navy-100">
@@ -29,8 +30,12 @@ export default function Navbar() {
               <Globe className="w-5 h-5 text-navy-950" />
             </div>
             <div className="flex flex-col">
-              <span className="text-lg font-bold text-navy-950 leading-tight">Global Certify</span>
-              <span className="text-[10px] uppercase tracking-widest text-navy-500 font-medium">Boutique Agency</span>
+              <span className="text-lg font-bold text-navy-950 leading-tight">
+                Global Certify
+              </span>
+              <span className="text-[10px] uppercase tracking-widest text-navy-500 font-medium">
+                Boutique Agency
+              </span>
             </div>
           </Link>
 
@@ -42,8 +47,8 @@ export default function Navbar() {
                 href={link.href}
                 className={`px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
                   pathname === link.href
-                    ? 'text-navy-900 bg-navy-50'
-                    : 'text-navy-600 hover:text-navy-900 hover:bg-navy-50'
+                    ? "text-navy-900 bg-navy-50"
+                    : "text-navy-600 hover:text-navy-900 hover:bg-navy-50"
                 }`}
               >
                 {link.label}
@@ -53,10 +58,7 @@ export default function Navbar() {
 
           {/* CTA Button */}
           <div className="hidden xl:flex items-center gap-3">
-            <Link
-              href="/contact"
-              className="btn-primary"
-            >
+            <Link href="/contact" className="btn-primary">
               Start Your Journey
             </Link>
           </div>
@@ -67,7 +69,11 @@ export default function Navbar() {
             className="xl:hidden p-2 rounded-lg text-navy-700 hover:bg-navy-50 transition-colors"
             aria-label="Toggle menu"
           >
-            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {mobileMenuOpen ? (
+              <X className="w-6 h-6" />
+            ) : (
+              <Menu className="w-6 h-6" />
+            )}
           </button>
         </div>
 
@@ -82,8 +88,8 @@ export default function Navbar() {
                   onClick={() => setMobileMenuOpen(false)}
                   className={`px-4 py-3 text-sm font-medium rounded-lg transition-colors ${
                     pathname === link.href
-                      ? 'text-navy-900 bg-navy-50'
-                      : 'text-navy-600 hover:text-navy-900 hover:bg-navy-50'
+                      ? "text-navy-900 bg-navy-50"
+                      : "text-navy-600 hover:text-navy-900 hover:bg-navy-50"
                   }`}
                 >
                   {link.label}
@@ -103,5 +109,5 @@ export default function Navbar() {
         )}
       </nav>
     </header>
-  )
+  );
 }
