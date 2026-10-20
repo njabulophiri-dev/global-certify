@@ -1,3 +1,6 @@
+import { MessageCircle } from "lucide-react";
+import PageHero from "@/components/PageHero";
+
 const faqs = [
   { question: 'How long does the application process take?', answer: 'Typically 3–6 months from initial consultation to admission letter. Scholarship (Quota) applications have specific deadlines set by the Russian Government, usually closing in January for September intake. We keep you on track so nothing slips through the cracks.' },
   { question: 'Is my degree recognised in South Africa?', answer: 'Yes — with proper planning. Medical graduates need HPCSA registration. Engineering graduates need ECSA evaluation. We guide you through this process from day one, not as an afterthought. Recognition is a strategy, not a surprise.' },
@@ -10,15 +13,12 @@ const faqs = [
 export default function FAQPage() {
   return (
     <>
-      <section className="gradient-navy py-20 lg:py-28">
-        <div className="container-custom">
-          <div className="max-w-3xl mx-auto text-center">
-            <span className="text-sm font-semibold uppercase tracking-wider text-gold-400 mb-4 block">FAQ</span>
-            <h1 className="heading-lg text-white mb-6">Frequently Asked Questions</h1>
-            <p className="text-lg text-navy-200 leading-relaxed">The questions we actually get — answered honestly.</p>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="FAQ"
+        icon={MessageCircle}
+        title="Frequently asked questions"
+        description="The questions we actually get — answered honestly."
+      />
       <section className="py-16 lg:py-24 bg-white">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto space-y-6">

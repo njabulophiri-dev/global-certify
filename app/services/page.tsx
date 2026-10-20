@@ -8,6 +8,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import Link from "next/link";
+import PageHero from "@/components/PageHero";
 
 const services = [
   {
@@ -85,24 +86,17 @@ const services = [
 export default function ServicesPage() {
   return (
     <>
-      <section className="gradient-navy py-20 lg:py-28">
-        <div className="container-custom">
-          <div className="max-w-3xl">
-            <span className="text-sm font-semibold uppercase tracking-wider text-gold-400 mb-4 block">
-              Our Services
-            </span>
-            <h1 className="heading-lg text-white mb-6">
-              From application to graduation.{" "}
-              <span className="text-gold-400">And beyond.</span>
-            </h1>
-            <p className="text-lg text-navy-200 leading-relaxed max-w-2xl">
-              We don&apos;t do half-measures. Every service is designed around
-              one question: &ldquo;What would we have wanted when we were in
-              your shoes?&rdquo;
-            </p>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="Our Services"
+        icon={FileCheck}
+        title={
+          <>
+            From application to graduation.{" "}
+            <span className="text-coral-300">And beyond.</span>
+          </>
+        }
+        description="We don’t do half-measures. Every service is designed around one question: “What would we have wanted when we were in your shoes?”"
+      />
 
       <section className="py-16 lg:py-24 bg-white">
         <div className="container-custom">

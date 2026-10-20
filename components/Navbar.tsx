@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import { Menu, X, Globe } from "lucide-react";
 
 const navLinks = [
-  { href: "/about", label: "About Us" },
+  { href: "/", label: "About Us" },
   { href: "/why-russia", label: "Why Russia" },
   { href: "/services", label: "Services" },
   { href: "/pricing", label: "Pricing" },
@@ -21,34 +21,35 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-navy-100">
-      <nav className="container-custom">
+    <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-ink-950/95 text-white shadow-lg shadow-ink-950/10 backdrop-blur-xl">
+      <nav className="container-custom" aria-label="Main navigation">
         <div className="flex items-center justify-between h-18 lg:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2.5 group">
-            <div className="flex items-center justify-center w-10 h-10 rounded-full bg-gold-500 group-hover:bg-gold-400 transition-colors">
-              <Globe className="w-5 h-5 text-navy-950" />
+            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-lime-300 transition-transform duration-300 group-hover:rotate-12 group-hover:scale-105">
+              <Globe className="h-5 w-5 text-ink-950" />
             </div>
             <div className="flex flex-col">
-              <span className="text-lg font-bold text-navy-950 leading-tight">
+              <span className="text-lg font-bold leading-tight text-white">
                 Global Certify
               </span>
-              <span className="text-[10px] uppercase tracking-widest text-navy-500 font-medium">
-                Boutique Agency
+              <span className="text-[10px] font-medium uppercase tracking-widest text-slate-400">
+                Your next chapter
               </span>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden xl:flex items-center gap-1">
+          <div className="hidden items-center gap-1 xl:flex">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
+                aria-current={pathname === link.href ? "page" : undefined}
+                className={`nav-link ${
                   pathname === link.href
-                    ? "text-navy-900 bg-navy-50"
-                    : "text-navy-600 hover:text-navy-900 hover:bg-navy-50"
+                    ? "nav-link-active"
+                    : ""
                 }`}
               >
                 {link.label}
@@ -57,8 +58,8 @@ export default function Navbar() {
           </div>
 
           {/* CTA Button */}
-          <div className="hidden xl:flex items-center gap-3">
-            <Link href="/contact" className="btn-primary">
+          <div className="hidden items-center gap-3 xl:flex">
+            <Link href="/contact" className="btn-coral">
               Start Your Journey
             </Link>
           </div>
@@ -66,8 +67,10 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="xl:hidden p-2 rounded-lg text-navy-700 hover:bg-navy-50 transition-colors"
-            aria-label="Toggle menu"
+            className="rounded-xl p-2 text-white transition-colors hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime-300 xl:hidden"
+            aria-expanded={mobileMenuOpen}
+            aria-controls="mobile-navigation"
+            aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
           >
             {mobileMenuOpen ? (
               <X className="w-6 h-6" />
@@ -79,17 +82,21 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="xl:hidden pb-6 border-t border-navy-100 mt-2">
+          <div
+            id="mobile-navigation"
+            className="mt-2 border-t border-white/10 pb-6 xl:hidden"
+          >
             <div className="flex flex-col gap-1 pt-4">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`px-4 py-3 text-sm font-medium rounded-lg transition-colors ${
+                  aria-current={pathname === link.href ? "page" : undefined}
+                  className={`nav-link px-4 py-3 ${
                     pathname === link.href
-                      ? "text-navy-900 bg-navy-50"
-                      : "text-navy-600 hover:text-navy-900 hover:bg-navy-50"
+                      ? "nav-link-active"
+                      : ""
                   }`}
                 >
                   {link.label}
@@ -99,7 +106,7 @@ export default function Navbar() {
                 <Link
                   href="/contact"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="btn-primary w-full"
+                  className="btn-coral w-full"
                 >
                   Start Your Journey
                 </Link>

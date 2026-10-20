@@ -5,8 +5,8 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 15, 23, 42;
-  --background-rgb: 255, 255, 255;
+  --foreground-rgb: 16, 42, 67;
+  --background-rgb: 255, 249, 241;
 }
 
 html {
@@ -65,11 +65,207 @@ body {
   }
 
   .card {
-    @apply bg-white rounded-2xl border border-navy-100 shadow-sm hover:shadow-md transition-shadow duration-300;
+    @apply rounded-2xl border border-navy-100 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-gold-200 hover:shadow-xl;
   }
 
   .gradient-navy {
-    @apply bg-gradient-to-br from-navy-900 via-navy-800 to-navy-950;
+    @apply bg-gradient-to-br from-ink-900 via-ink-950 to-ink-950;
+  }
+
+  .site-hero {
+    @apply relative isolate overflow-hidden bg-ink-950 text-white;
+    background-image:
+      radial-gradient(ellipse at 88% 15%, rgba(241, 90, 58, 0.18), transparent 36%),
+      radial-gradient(ellipse at 10% 100%, rgba(202, 240, 116, 0.1), transparent 35%),
+      linear-gradient(120deg, #173b50, #102a43 70%);
+  }
+
+  .site-hero-grid {
+    @apply hero-grid pointer-events-none absolute inset-0 opacity-30;
+  }
+
+  .site-hero-kicker {
+    @apply mb-6 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-xs font-bold uppercase tracking-[0.16em] text-lime-200 sm:text-sm;
+  }
+
+  .site-hero-title {
+    @apply heading-lg text-balance text-white;
+  }
+
+  .site-hero-copy {
+    @apply mt-5 max-w-2xl text-base leading-relaxed text-slate-200 sm:text-lg;
+  }
+
+  .site-hero-watermark {
+    @apply pointer-events-none absolute right-4 top-8 flex h-28 w-28 items-center justify-center rounded-full border border-dashed border-lime-200/20 text-lime-200/20 sm:right-8 sm:top-10 lg:hidden;
+  }
+
+  .site-hero-art {
+    @apply relative mx-auto hidden aspect-square w-full max-w-[300px] items-center justify-center lg:flex;
+  }
+
+  .site-hero-orbit {
+    @apply absolute inset-4 rounded-full border border-dashed border-lime-200/30;
+  }
+
+  .site-hero-orbit-inner {
+    @apply absolute inset-12 rounded-full border border-coral-300/20;
+  }
+
+  .site-hero-emblem {
+    @apply relative flex h-36 w-36 items-center justify-center rounded-full bg-lime-300 text-ink-950 shadow-[0_0_60px_rgba(217,249,157,0.25)];
+  }
+
+  .site-hero-tag {
+    @apply absolute rounded-2xl border border-white/10 bg-ink-900/90 px-4 py-3 shadow-xl backdrop-blur;
+  }
+
+  .site-hero-tag-label {
+    @apply mb-1 flex items-center gap-2 text-[10px] font-bold uppercase tracking-wider text-coral-200;
+  }
+
+  .site-hero-tag-value {
+    @apply text-sm font-bold text-white;
+  }
+
+  .btn-coral {
+    @apply inline-flex items-center justify-center rounded-xl bg-coral-400 px-6 py-3.5 text-sm font-bold text-ink-950 transition duration-200 hover:-translate-y-0.5 hover:bg-lime-300 focus:outline-none focus:ring-2 focus:ring-lime-300 focus:ring-offset-2 focus:ring-offset-ink-950;
+  }
+
+  .btn-light-outline {
+    @apply inline-flex items-center justify-center rounded-xl border border-white/30 px-6 py-3.5 text-sm font-semibold text-white transition duration-200 hover:-translate-y-0.5 hover:border-lime-200 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-lime-300 focus:ring-offset-2 focus:ring-offset-ink-950;
+  }
+
+  .btn-ink {
+    @apply inline-flex shrink-0 items-center justify-center rounded-xl bg-ink-950 px-6 py-3.5 text-sm font-bold text-white transition duration-200 hover:-translate-y-0.5 hover:bg-ink-800 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-coral-500;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center rounded-full bg-coral-100 px-4 py-2 text-xs font-black uppercase tracking-[0.16em] text-coral-700;
+  }
+
+  .journey-card {
+    @apply rounded-3xl border border-ink-100 bg-white p-7 transition-all duration-300 hover:-translate-y-2 hover:border-coral-200 hover:shadow-xl;
+  }
+
+  .promise-card {
+    @apply rounded-3xl border border-ink-950/5 bg-white/80 p-6 transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-lg;
+  }
+
+  .footer-link {
+    @apply inline-flex items-center rounded-sm text-sm text-slate-300 transition-colors hover:text-lime-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime-300;
+  }
+
+  .nav-link {
+    @apply rounded-xl px-3 py-2 text-sm font-semibold text-slate-200 transition-colors hover:bg-white/10 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime-300;
+  }
+
+  .nav-link-active {
+    @apply bg-white/10 text-lime-200;
+  }
+}
+
+@keyframes enter-up {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-2deg);
+  }
+  50% {
+    transform: translateY(-11px) rotate(2deg);
+  }
+}
+
+@keyframes pulse-orbit {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: scale(0.96);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.03);
+  }
+}
+
+@layer utilities {
+  .hero-grid {
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0.055) 1px,
+        transparent 1px
+      ),
+      linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.055) 1px,
+        transparent 1px
+      );
+    background-size: 44px 44px;
+    mask-image: radial-gradient(ellipse at center, black, transparent 76%);
+  }
+
+  .motion-enter {
+    animation: enter-up 700ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  }
+
+  .motion-float {
+    animation: float 4.5s ease-in-out infinite;
+  }
+
+  .motion-pulse {
+    animation: pulse-orbit 5s ease-in-out infinite;
+  }
+
+  .motion-delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .motion-delay-300 {
+    animation-delay: 300ms;
+  }
+
+  .motion-delay-500 {
+    animation-delay: 500ms;
+  }
+
+  .motion-delay-100 {
+    animation-delay: 100ms;
+  }
+
+  .motion-delay-400 {
+    animation-delay: 400ms;
+  }
+
+  .motion-delay-600 {
+    animation-delay: 600ms;
+  }
+
+  .motion-delay-700 {
+    animation-delay: 700ms;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      scroll-behavior: auto !important;
+      transition-duration: 0.01ms !important;
+    }
   }
 }
 

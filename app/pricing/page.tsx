@@ -9,6 +9,7 @@ import {
   HelpCircle,
 } from "lucide-react";
 import Link from "next/link";
+import PageHero from "@/components/PageHero";
 
 const tiers = [
   {
@@ -227,24 +228,12 @@ const faqs = [
 export default function PricingPage() {
   return (
     <>
-      {/* Hero */}
-      <section className="gradient-navy py-20 lg:py-28">
-        <div className="container-custom">
-          <div className="max-w-3xl mx-auto text-center">
-            <span className="text-sm font-semibold uppercase tracking-wider text-gold-400 mb-4 block">
-              Pricing
-            </span>
-            <h1 className="heading-lg text-white mb-6">
-              Transparent. Fair. No Hidden Fees.
-            </h1>
-            <p className="text-lg text-navy-200 leading-relaxed max-w-2xl mx-auto">
-              We publish everything. Every rand. Every service. Every
-              expectation. Some agencies have hidden fees. We have hidden
-              nothing. Try us.
-            </p>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="Pricing"
+        icon={CreditCard}
+        title="Transparent. Fair. No Hidden Fees."
+        description="We publish everything. Every rand. Every service. Every expectation. Some agencies have hidden fees. We have hidden nothing. Try us."
+      />
 
       {/* Tier Cards */}
       <section className="py-16 lg:py-24 bg-white">

@@ -1,279 +1,293 @@
 import Link from "next/link";
 import {
   ArrowRight,
-  GraduationCap,
+  ArrowUpRight,
   FileCheck,
+  Globe2,
+  GraduationCap,
+  HeartHandshake,
+  MapPin,
   Plane,
-  HeartPulse,
-  Briefcase,
-  MessageCircle,
+  ShieldCheck,
+  Sparkles,
+  Users,
 } from "lucide-react";
 
-const services = [
+const journey = [
   {
+    number: "01",
+    title: "Find your route",
+    text: "Explore study options and choose a path that fits your goals.",
+    icon: Globe2,
+  },
+  {
+    number: "02",
+    title: "Get application-ready",
+    text: "We help you prepare documents, apply, and keep each next step clear.",
     icon: FileCheck,
-    title: "Application Support",
-    description: `Document verification, submission, admission letters — handled by people who've done it themselves.`,
   },
   {
-    icon: GraduationCap,
-    title: "Scholarship Guidance",
-    description: `Russian Government Quota applications. Free. Yes, actually free. No hidden fees.`,
-  },
-  {
-    icon: FileCheck,
-    title: "Visa & Legal",
-    description: `Invitation letters, contract review, POPIA compliance — the boring stuff, made simple.`,
-  },
-  {
+    number: "03",
+    title: "Land ready for what's next",
+    text: "Get practical pre-departure guidance and support when you arrive.",
     icon: Plane,
-    title: "Pre-Departure",
-    description: `Mental health screening, Russian language prep, cultural orientation — because "good luck" isn't a strategy.`,
-  },
-  {
-    icon: HeartPulse,
-    title: "In-Country Support",
-    description: `Airport pickup, migration registration, 24/7 support — we meet you where others send a PDF.`,
-  },
-  {
-    icon: Briefcase,
-    title: "Career Transition",
-    description: `ECSA, HPCSA guidance, study-to-work transition — from graduate to professional.`,
   },
 ];
 
-const differentiators = [
+const pillars = [
   {
-    label: "They charge hidden fees",
-    value: "We publish everything. Every rand. Every ruble.",
+    icon: ShieldCheck,
+    title: "Clear from day one",
+    text: "We explain the process, the costs, and what to expect in plain language.",
   },
   {
-    label: `They hope you don't read the fine print`,
-    value: "We write the fine print so you can actually understand it.",
+    icon: GraduationCap,
+    title: "Focused on your graduation",
+    text: "We treat you like a future graduate because that is who you are from day one.",
   },
   {
-    label: "They treat you like a number",
-    value: "We treat you like a future graduate.",
+    icon: HeartHandshake,
+    title: "People in your corner",
+    text: "Our team brings lived experience and personal guidance to every step.",
   },
   {
-    label: 'They hand you a ticket and say "good luck"',
-    value: "We meet you at the airport with a smile and a plan.",
-  },
-  {
-    label: "They collect commission from the university",
-    value: "We work for you — not for a commission.",
+    icon: Users,
+    title: "A team that gets it",
+    text: "We've studied in Russia and know what it takes to settle into a new place.",
   },
 ];
 
 export default function HomePage() {
   return (
     <>
-      {/* Hero Section */}
-      <section className="relative overflow-hidden gradient-navy">
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-96 h-96 bg-gold-500/10 rounded-full blur-3xl" />
-          <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-gold-500/5 rounded-full blur-3xl" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-navy-800/30 rounded-full blur-3xl" />
+      <section className="relative isolate overflow-hidden bg-ink-950 text-white">
+        <div className="absolute inset-0 -z-10 overflow-hidden">
+          <div className="absolute -top-32 right-[-8rem] h-96 w-96 rounded-full bg-coral-500/20 blur-3xl motion-pulse" />
+          <div className="absolute -bottom-48 left-[-8rem] h-96 w-96 rounded-full bg-lime-300/10 blur-3xl motion-pulse motion-delay-300" />
+          <div className="hero-grid absolute inset-0 opacity-30" />
         </div>
 
-        <div className="container-custom relative z-10 py-24 lg:py-32">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gold-500/10 border border-gold-500/20 text-gold-400 text-sm font-medium mb-8">
-              <span className="w-2 h-2 rounded-full bg-gold-400 animate-pulse" />
-              Now accepting 2027 applications
+        <div className="container-custom grid min-h-[650px] items-center gap-14 py-20 lg:grid-cols-[1.1fr_0.9fr] lg:py-24">
+          <div className="relative z-10 max-w-2xl motion-enter">
+            <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm font-semibold text-lime-200">
+              <Sparkles className="h-4 w-4 text-coral-300" />
+              South Africa to Russia, with people who've been there
             </div>
 
-            <h1 className="heading-xl text-white mb-6 text-balance">
-              A Team of <span className="text-gold-400">Russia-Trained</span>{" "}
-              South African Professionals.
+            <h1 className="heading-xl mb-6 text-balance text-white">
+              Your study-abroad story starts{" "}
+              <span className="text-coral-300">here.</span>
             </h1>
-
-            <p className="text-lg sm:text-xl text-navy-200 max-w-2xl mx-auto mb-10 leading-relaxed">
-              Spread across Russian universities. One shared mission: creating
-              trusted, transparent pathways to world-class education in Russia.
+            <p className="mb-9 max-w-xl text-lg leading-relaxed text-slate-200 sm:text-xl">
+              We&apos;re Russia-trained South African professionals helping you
+              find your study path, get application-ready, and feel prepared
+              for your next chapter.
             </p>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link href="/services" className="btn-primary w-full sm:w-auto">
-                Explore Our Services
-                <ArrowRight className="w-4 h-4 ml-2" />
+            <div className="flex flex-col gap-3 sm:flex-row">
+              <Link href="/why-russia" className="btn-coral">
+                Explore your options
+                <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
-              <Link
-                href="/contact"
-                className="btn-outline border-navy-400 text-navy-200 hover:bg-white hover:text-navy-900 hover:border-white w-full sm:w-auto"
-              >
-                <MessageCircle className="w-4 h-4 mr-2" />
-                WhatsApp a Graduate
+              <Link href="/team" className="btn-light-outline">
+                Meet your people
+                <ArrowUpRight className="ml-2 h-4 w-4" />
               </Link>
             </div>
-          </div>
-        </div>
 
-        <div className="absolute bottom-0 left-0 right-0">
-          <svg
-            viewBox="0 0 1440 120"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="w-full"
-          >
-            <path
-              d="M0 120L60 110C120 100 240 80 360 70C480 60 600 60 720 65C840 70 960 80 1080 85C1200 90 1320 90 1380 90L1440 90V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z"
-              fill="white"
-            />
-          </svg>
-        </div>
-      </section>
-
-      {/* Mission Banner */}
-      <section className="py-16 lg:py-20 bg-white">
-        <div className="container-custom">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="heading-md text-navy-900 mb-4">
-              A boutique bilateral agency,{" "}
-              <span className="text-gold-600">
-                not a call-centre recruiter.
+            <div className="mt-10 flex flex-wrap gap-x-6 gap-y-3 text-sm font-medium text-slate-300">
+              <span className="inline-flex items-center gap-2">
+                <span className="h-2 w-2 rounded-full bg-lime-300" />
+                Guidance by Russia-trained graduates
               </span>
-            </h2>
-            <p className="body-lg">
-              We don&apos;t read from scripts. We don&apos;t chase commissions.
-              We don&apos;t disappear after the invoice clears. We are
-              Russia-trained South African professionals who understand both
-              systems intimately — because we&apos;ve lived them.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Services Section */}
-      <section className="py-16 lg:py-24 bg-navy-50">
-        <div className="container-custom">
-          <div className="text-center mb-14">
-            <span className="text-sm font-semibold uppercase tracking-wider text-gold-600 mb-2 block">
-              What We Do
-            </span>
-            <h2 className="heading-md text-navy-900">
-              End-to-End Support, From Application to Graduation
-            </h2>
+              <span className="inline-flex items-center gap-2">
+                <span className="h-2 w-2 rounded-full bg-coral-300" />
+                Support from application to arrival
+              </span>
+            </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.map((service, index) => (
-              <div key={index} className="card p-8 group">
-                <div className="w-12 h-12 rounded-xl bg-gold-100 flex items-center justify-center mb-5 group-hover:bg-gold-200 transition-colors">
-                  <service.icon className="w-6 h-6 text-gold-700" />
+          <div className="relative mx-auto w-full max-w-lg motion-enter motion-delay-200">
+            <div className="route-orbit absolute inset-5 rounded-full border border-dashed border-lime-200/30 motion-pulse" />
+            <div className="route-orbit absolute inset-14 rounded-full border border-coral-300/20 motion-pulse motion-delay-300" />
+
+            <div className="relative mx-auto flex aspect-square max-w-[440px] items-center justify-center">
+              <div className="absolute h-[72%] w-[72%] rounded-full bg-coral-500/15 blur-2xl" />
+              <div className="relative flex h-56 w-56 items-center justify-center rounded-full border border-white/10 bg-ink-900 shadow-[0_30px_100px_rgba(0,0,0,0.35)] sm:h-64 sm:w-64">
+                <div className="absolute inset-4 rounded-full border border-white/10" />
+                <div className="flex h-32 w-32 items-center justify-center rounded-full bg-lime-300 text-ink-950 shadow-[0_0_60px_rgba(217,249,157,0.25)] sm:h-36 sm:w-36">
+                  <GraduationCap className="h-16 w-16" strokeWidth={1.5} />
                 </div>
-                <h3 className="text-lg font-semibold text-navy-900 mb-2">
-                  {service.title}
-                </h3>
-                <p className="text-sm text-navy-600 leading-relaxed">
-                  {service.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Differentiation Section */}
-      <section className="py-16 lg:py-24 bg-white">
-        <div className="container-custom">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            <div>
-              <span className="text-sm font-semibold uppercase tracking-wider text-gold-600 mb-2 block">
-                The Gap We Fill
-              </span>
-              <h2 className="heading-md text-navy-900 mb-6">
-                Some agencies think a student is a transaction.{" "}
-                <span className="text-gold-600">
-                  We know they are a person.
+                <span className="absolute -right-3 top-10 flex h-12 w-12 items-center justify-center rounded-2xl bg-coral-400 text-ink-950 shadow-lg motion-float">
+                  <Plane className="h-6 w-6 -rotate-12" />
                 </span>
-              </h2>
-              <div className="space-y-6">
-                {differentiators.map((item, index) => (
-                  <div key={index} className="flex gap-4">
-                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-red-100 flex items-center justify-center mt-0.5">
-                      <span className="text-red-500 text-xs font-bold">
-                        &times;
-                      </span>
-                    </div>
-                    <div>
-                      <p className="text-sm text-navy-400 line-through">
-                        {item.label}
-                      </p>
-                      <p className="text-navy-800 font-medium">{item.value}</p>
-                    </div>
-                  </div>
-                ))}
+                <span className="absolute -bottom-2 left-7 flex h-11 w-11 items-center justify-center rounded-full bg-white text-coral-600 shadow-lg motion-float motion-delay-300">
+                  <Sparkles className="h-5 w-5" />
+                </span>
               </div>
-            </div>
 
-            <div className="relative">
-              <div className="absolute inset-0 bg-gold-500/10 rounded-3xl transform rotate-3" />
-              <div className="relative bg-navy-900 rounded-3xl p-8 lg:p-10 text-white">
-                <blockquote className="text-xl lg:text-2xl font-medium leading-relaxed mb-6">
-                  &ldquo;Some agencies promise the world and deliver confusion.
-                  We promise clarity and deliver results. Some agencies collect
-                  fees and disappear. We collect accountability and stay.&rdquo;
-                </blockquote>
-                <div className="border-t border-navy-700 pt-6">
-                  <p className="text-navy-300 text-sm">
-                    That&apos;s the difference between a call centre and a
-                    boutique agency. That&apos;s the difference between a sales
-                    pitch and a partnership.
-                  </p>
+              <div className="absolute left-0 top-[22%] rounded-2xl border border-white/10 bg-ink-900/90 p-4 shadow-xl backdrop-blur motion-float">
+                <div className="mb-1 flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-lime-200">
+                  <MapPin className="h-3.5 w-3.5" />
+                  Starting point
                 </div>
+                <p className="text-lg font-bold text-white">South Africa</p>
+              </div>
+
+              <div className="absolute bottom-[17%] right-0 rounded-2xl border border-white/10 bg-ink-900/90 p-4 shadow-xl backdrop-blur motion-float motion-delay-200">
+                <div className="mb-1 flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-coral-200">
+                  <Globe2 className="h-3.5 w-3.5" />
+                  Next chapter
+                </div>
+                <p className="text-lg font-bold text-white">Russia</p>
+              </div>
+
+              <div className="absolute right-[5%] top-[5%] rounded-full bg-lime-300 px-4 py-2 text-xs font-black uppercase tracking-widest text-ink-950 shadow-lg motion-float motion-delay-500">
+                Your future, in motion
               </div>
             </div>
           </div>
         </div>
+
       </section>
 
-      {/* Stats Section */}
-      <section className="py-16 lg:py-20 gradient-navy">
+      <section className="bg-cream-50 py-20 lg:py-28">
         <div className="container-custom">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              { value: "500+", label: "Students Guided" },
-              { value: "25+", label: "Partner Universities" },
-              { value: "8", label: "Team Members" },
-              { value: "100%", label: "Free Scholarship Help" },
-            ].map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-3xl lg:text-4xl font-bold text-gold-400 mb-2">
-                  {stat.value}
+          <div className="mb-12 max-w-3xl motion-enter">
+            <span className="eyebrow">Your journey, made human</span>
+            <h2 className="heading-lg mt-3 text-ink-950">
+              Big move. Clear steps.{" "}
+              <span className="text-coral-600">People in your corner.</span>
+            </h2>
+          </div>
+
+          <div className="grid gap-5 md:grid-cols-3">
+            {journey.map((step, index) => (
+              <article
+                key={step.number}
+                className="journey-card group motion-enter"
+                style={{ animationDelay: `${(index + 1) * 100}ms` }}
+              >
+                <div className="mb-8 flex items-start justify-between">
+                  <span className="text-sm font-black tracking-widest text-coral-600">
+                    {step.number}
+                  </span>
+                  <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-lime-200 text-ink-950 transition-transform duration-300 group-hover:-rotate-6 group-hover:scale-110">
+                    <step.icon className="h-6 w-6" />
+                  </span>
                 </div>
-                <div className="text-sm text-navy-300">{stat.label}</div>
-              </div>
+                <h3 className="mb-3 text-xl font-bold text-ink-950">
+                  {step.title}
+                </h3>
+                <p className="text-sm leading-relaxed text-ink-700">
+                  {step.text}
+                </p>
+              </article>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 lg:py-28 bg-white">
-        <div className="container-custom">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="heading-lg text-navy-900 mb-6">
-              Ready to start your Russia journey?
-            </h2>
-            <p className="body-lg mb-10 max-w-xl mx-auto">
-              Whether you&apos;re a student, parent, or school representative —
-              we&apos;d love to hear from you. No pressure, no scripts, just
-              honest guidance.
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link href="/contact" className="btn-secondary w-full sm:w-auto">
-                Get Started Today
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </Link>
-              <Link
-                href="/scholarships"
-                className="btn-outline w-full sm:w-auto"
-              >
-                Explore Scholarships
-              </Link>
+      <section className="relative overflow-hidden bg-white py-20 lg:py-28">
+        <div className="container-custom grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
+          <div className="relative">
+            <div className="absolute -left-5 -top-5 h-28 w-28 rounded-full bg-coral-200" />
+            <div className="absolute -bottom-6 right-5 h-32 w-32 rounded-full bg-lime-200" />
+            <div className="relative rounded-[2rem] bg-ink-950 p-8 text-white sm:p-12">
+              <span className="mb-6 inline-flex rounded-full bg-white/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.16em] text-lime-200">
+                We know this feeling
+              </span>
+              <p className="text-2xl font-semibold leading-snug sm:text-3xl">
+                New place. New language. New possibilities.{" "}
+                <span className="text-coral-300">
+                  You don&apos;t have to figure it all out alone.
+                </span>
+              </p>
+              <div className="mt-8 flex items-center gap-3 border-t border-white/15 pt-6 text-sm text-slate-300">
+                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-lime-300 text-ink-950">
+                  <Users className="h-5 w-5" />
+                </span>
+                Russia-trained South African professionals
+              </div>
             </div>
           </div>
+
+          <div className="motion-enter">
+            <span className="eyebrow">Meet Global Certify</span>
+            <h2 className="heading-md mt-3 text-ink-950">
+              We&apos;ve made the journey. Now we help you make yours.
+            </h2>
+            <div className="mt-6 space-y-4 text-lg leading-relaxed text-ink-700">
+              <p>
+                Global Certify is a South African agency supporting students
+                who want to study in Russia. Our team brings first-hand
+                experience of both systems and a shared commitment to clear,
+                personal guidance.
+              </p>
+              <p>
+                From your first question to your first days on campus, we help
+                make each next step feel more manageable.
+              </p>
+            </div>
+            <Link
+              href="/team"
+              className="group mt-8 inline-flex items-center font-bold text-coral-700 transition-colors hover:text-ink-950"
+            >
+              Get to know the team
+              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-lime-100 py-20 lg:py-28">
+        <div className="container-custom">
+          <div className="mx-auto mb-12 max-w-2xl text-center motion-enter">
+            <span className="eyebrow">Our promise to you</span>
+            <h2 className="heading-lg mt-3 text-ink-950">
+              Good energy.{" "}
+              <span className="text-coral-600">Solid support.</span>
+            </h2>
+          </div>
+
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {pillars.map((pillar, index) => (
+              <article
+                key={pillar.title}
+                className="promise-card motion-enter"
+                style={{ animationDelay: `${(index + 1) * 100}ms` }}
+              >
+                <span className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-coral-100 text-coral-700">
+                  <pillar.icon className="h-6 w-6" />
+                </span>
+                <h3 className="mb-2 font-bold text-ink-950">{pillar.title}</h3>
+                <p className="text-sm leading-relaxed text-ink-700">
+                  {pillar.text}
+                </p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-coral-500 px-4 py-16 text-ink-950 sm:px-6 lg:py-20">
+        <div className="container-custom flex flex-col items-start justify-between gap-8 sm:flex-row sm:items-center">
+          <div className="max-w-2xl">
+            <span className="text-sm font-black uppercase tracking-[0.18em]">
+              Your next chapter is calling
+            </span>
+            <h2 className="mt-3 text-3xl font-black tracking-tight sm:text-4xl">
+              Let&apos;s talk about your Russia study plans.
+            </h2>
+            <p className="mt-3 max-w-xl text-ink-900">
+              Bring your questions, your big plans, and yes—even the nervous
+              ones. We&apos;re here for all of it.
+            </p>
+          </div>
+          <Link href="/contact" className="btn-ink">
+            Start the conversation
+            <ArrowRight className="ml-2 h-4 w-4" />
+          </Link>
         </div>
       </section>
     </>

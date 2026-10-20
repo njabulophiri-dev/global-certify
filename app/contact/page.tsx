@@ -1,21 +1,15 @@
 import { Mail, Phone, MapPin, MessageCircle, Clock, Send } from 'lucide-react'
+import PageHero from '@/components/PageHero'
 
 export default function ContactPage() {
   return (
     <>
-      <section className="gradient-navy py-20 lg:py-28">
-        <div className="container-custom">
-          <div className="max-w-3xl mx-auto text-center">
-            <span className="text-sm font-semibold uppercase tracking-wider text-gold-400 mb-4 block">
-              Contact
-            </span>
-            <h1 className="heading-lg text-white mb-6">Get in Touch</h1>
-            <p className="text-lg text-navy-200 leading-relaxed">
-              Ready to start your Russia journey? Or just curious? Either way, we&apos;d love to hear from you.
-            </p>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="Contact"
+        icon={MessageCircle}
+        title="Get in touch"
+        description="Ready to start your Russia journey? Or just curious? Either way, we’d love to hear from you."
+      />
 
       <section className="py-16 lg:py-24 bg-white">
         <div className="container-custom">

@@ -4,9 +4,9 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Global Certify",
+  title: "Global Certify | Study in Russia",
   description:
-    "A boutique bilateral agency creating trusted, transparent pathways for African students to access world-class education in Russia. Not a call-centre recruiter.",
+    "South African professionals helping students plan their studies in Russia with clear guidance, lived experience, and personal support.",
 };
 
 export default function RootLayout({
@@ -15,7 +15,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" data-scroll-behavior="smooth">
       <body className="min-h-screen flex flex-col antialiased">
         <Navbar />
         <main className="flex-1">{children}</main>

@@ -1,5 +1,6 @@
-import { Check, ArrowRight, Sparkles, Banknote, Home, Utensils } from 'lucide-react'
+import { Check, ArrowRight, Banknote, Home, Utensils } from 'lucide-react'
 import Link from 'next/link'
+import PageHero from '@/components/PageHero'
 
 const covers = [
   { icon: Banknote, label: 'Full tuition fees' },
@@ -17,25 +18,25 @@ const helps = [
 export default function ScholarshipsPage() {
   return (
     <>
-      {/* Hero */}
-      <section className="gradient-navy py-20 lg:py-28">
-        <div className="container-custom">
-          <div className="max-w-3xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gold-500/10 border border-gold-500/20 text-gold-400 text-sm font-medium mb-8">
-              <Sparkles className="w-4 h-4" />
-              Fully Funded
-            </div>
-            <h1 className="heading-lg text-white mb-6">
-              Russian Government Scholarship{' '}
-              <span className="text-gold-400">(Quota)</span>
-            </h1>
-            <p className="text-lg text-navy-200 leading-relaxed max-w-2xl mx-auto">
-              The Russian Government offers fully-funded scholarships to international students. 
-              We help South African students apply — <span className="text-gold-400 font-semibold">at no cost to the student.</span>
-            </p>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="Fully Funded"
+        icon={Banknote}
+        title={
+          <>
+            Russian Government Scholarship{" "}
+            <span className="text-coral-300">(Quota)</span>
+          </>
+        }
+        description={
+          <>
+            The Russian Government offers fully-funded scholarships to
+            international students. We help South African students apply —{" "}
+            <span className="font-semibold text-lime-200">
+              at no cost to the student.
+            </span>
+          </>
+        }
+      />
 
       {/* Main Content */}
       <section className="py-16 lg:py-24 bg-white">

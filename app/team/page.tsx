@@ -7,7 +7,9 @@ import {
   Plane,
   Scale,
   Languages,
+  Users,
 } from "lucide-react";
+import PageHero from "@/components/PageHero";
 
 const team = [
   {
@@ -76,23 +78,12 @@ const team = [
 export default function TeamPage() {
   return (
     <>
-      {/* Hero */}
-      <section className="gradient-navy py-20 lg:py-28">
-        <div className="container-custom">
-          <div className="max-w-3xl mx-auto text-center">
-            <span className="text-sm font-semibold uppercase tracking-wider text-gold-400 mb-4 block">
-              Our Team
-            </span>
-            <h1 className="heading-lg text-white mb-6">
-              Meet the people who&apos;ve actually done this.
-            </h1>
-            <p className="text-lg text-navy-200 leading-relaxed">
-              Every member of our team has walked the path you&apos;re about to
-              take. We don&apos;t just advise — we remember.
-            </p>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="Our Team"
+        icon={Users}
+        title="Meet the people who&apos;ve actually done this."
+        description="Every member of our team has walked the path you&apos;re about to take. We don&apos;t just advise — we remember."
+      />
 
       {/* Team Grid */}
       <section className="py-16 lg:py-24 bg-white">

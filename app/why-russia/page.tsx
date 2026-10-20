@@ -1,98 +1,82 @@
-import {
-  Award,
-  Wallet,
-  Globe,
-  Briefcase,
-  Gift,
-  ThermometerSnowflake,
-  ShieldCheck,
-  GraduationCap,
-} from "lucide-react";
+import { Award, Wallet, Globe, Briefcase, Gift, GraduationCap } from "lucide-react";
+import PageHero from "@/components/PageHero";
 
 const benefits = [
   {
     icon: Award,
-    title: "World-Class Education",
+    title: "A broad choice of programmes",
     description:
-      "Russian universities are globally recognised. This isn't a backup plan — it's a power move.",
+      "Explore programmes across disciplines, from medicine and engineering to the sciences, humanities and more.",
   },
   {
     icon: Wallet,
-    title: "Affordable Tuition",
+    title: "An international education",
     description:
-      "Competitive fees and scholarships available. Quality education without the debt avalanche.",
+      "Study in a new academic and cultural environment while building skills, connections and a global perspective.",
   },
   {
     icon: Globe,
-    title: "Cultural Experience",
+    title: "A cultural experience",
     description:
-      "Rich history, diverse culture, global network. You'll return with a degree and a worldview.",
+      "Discover Russia's history, language and traditions as part of everyday student life.",
   },
   {
     icon: Briefcase,
-    title: "Career Opportunities",
+    title: "A clear path to your goals",
     description:
-      "Russian qualifications are respected worldwide. From Moscow to Midrand, your credentials travel.",
+      "Choose a programme with your academic interests, career plans and professional requirements in mind.",
   },
   {
     icon: Gift,
-    title: "Government Scholarships",
+    title: "Scholarship opportunities",
     description:
-      "Russian Quota covers tuition + stipends. Yes, the Russian government will pay you to study. Let that sink in.",
+      "South African students can apply for the Russian Government Quota scholarship. We guide you through eligibility, documents and application steps.",
   },
 ];
 
 const faqs = [
   {
-    question: `"But isn't it cold?"`,
+    question: "How do I choose the right programme?",
     answer:
-      "Yes. The winters are cold. The education is world-class. The scholarships are fully funded. Pack a jacket, not an excuse.",
+      "Consider your interests, entry requirements, costs, language of instruction and career plans. We help you understand these factors and compare suitable options.",
   },
   {
-    question: '"Will my degree be recognised back home?"',
+    question: "What about degree recognition in South Africa?",
     answer:
-      'Only if you plan it properly — which is exactly what we help you do. (Unlike some agencies who treat "recognition" like a surprise party.)',
+      "Recognition depends on the qualification and your intended profession and may involve evaluation or professional registration. We help you identify the relevant requirements before you apply.",
   },
   {
-    question: '"Is it safe?"',
+    question: "How can I prepare for life in Russia?",
     answer:
-      "Russia hosts over 300,000 international students annually. We were among them. We survived. We thrived. We graduated. And now we help others do the same.",
+      "We help you prepare with Russian language and cultural orientation, practical pre-departure guidance and in-country support after arrival.",
+  },
+  {
+    question: "How do I plan for safety and support?",
+    answer:
+      "Use current official travel advice, university guidance, and local emergency contacts when planning. Our team provides practical arrival and in-country support.",
   },
 ];
 
 export default function WhyRussiaPage() {
   return (
     <>
-      {/* Hero */}
-      <section className="gradient-navy py-20 lg:py-28">
-        <div className="container-custom">
-          <div className="max-w-3xl">
-            <span className="text-sm font-semibold uppercase tracking-wider text-gold-400 mb-4 block">
-              Why Russia
-            </span>
-            <h1 className="heading-lg text-white mb-6">
-              World-class education.{" "}
-              <span className="text-gold-400">
-                Without the world-class debt.
-              </span>
-            </h1>
-            <p className="text-lg text-navy-200 leading-relaxed max-w-2xl">
-              Russia isn&apos;t just a destination — it&apos;s a strategic
-              choice for ambitious South African students who want quality
-              without compromise.
-            </p>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="Why Russia"
+        icon={GraduationCap}
+        title="Build your future through a world-class education in Russia."
+        description="Explore academic programmes, experience a rich cultural heritage and gain an international perspective. We help South African students plan their studies in Russia with clear, personal guidance."
+      />
 
-      {/* Benefits */}
+      {/* Study opportunities */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="container-custom">
           <div className="text-center mb-14">
             <span className="text-sm font-semibold uppercase tracking-wider text-gold-600 mb-2 block">
-              Benefits
+              Study Opportunities
             </span>
-            <h2 className="heading-md text-navy-900">Why Study in Russia?</h2>
+            <h2 className="heading-md text-navy-900">
+              What Studying in Russia Can Offer
+            </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -113,15 +97,15 @@ export default function WhyRussiaPage() {
         </div>
       </section>
 
-      {/* Addressing Skepticism */}
+      {/* Practical questions */}
       <section className="py-16 lg:py-24 bg-navy-50">
         <div className="container-custom">
           <div className="text-center mb-14">
             <span className="text-sm font-semibold uppercase tracking-wider text-gold-600 mb-2 block">
-              Real Talk
+              Planning Your Studies
             </span>
             <h2 className="heading-md text-navy-900">
-              Addressing the Skepticism
+              Questions About Studying in Russia
             </h2>
           </div>
 

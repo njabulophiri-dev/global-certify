@@ -1,4 +1,5 @@
-import { FileCheck, Stethoscope, Cpu, Brain, Scale, Languages, Plane, Radio } from 'lucide-react'
+import { FileCheck, Stethoscope, Cpu, Brain, Scale, Languages, Plane, Radio, HeartPulse } from 'lucide-react'
+import PageHero from '@/components/PageHero'
 
 const supportTeam = [
   { icon: FileCheck, title: 'Academic Verification', lead: 'Mr. Katlego', description: 'Transcript evaluation, university matching, admission strategy.' },
@@ -14,15 +15,12 @@ const supportTeam = [
 export default function StudentSupportPage() {
   return (
     <>
-      <section className="gradient-navy py-20 lg:py-28">
-        <div className="container-custom">
-          <div className="max-w-3xl mx-auto text-center">
-            <span className="text-sm font-semibold uppercase tracking-wider text-gold-400 mb-4 block">Student Support</span>
-            <h1 className="heading-lg text-white mb-6">End-to-End Support</h1>
-            <p className="text-lg text-navy-200 leading-relaxed">Some agencies help you get there. We help you succeed — from the moment you apply to the moment you graduate and return.</p>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="Student Support"
+        icon={HeartPulse}
+        title="End-to-End Support"
+        description="Some agencies help you get there. We help you succeed — from the moment you apply to the moment you graduate and return."
+      />
       <section className="py-16 lg:py-24 bg-white">
         <div className="container-custom">
           <div className="text-center mb-14">
