@@ -23,7 +23,7 @@ const journey = [
   {
     number: "02",
     title: "Get application-ready",
-    text: "We help you prepare documents, apply, and keep each next step clear.",
+    text: "We help you prepare documents, apply and keep each next step clear.",
     icon: FileCheck,
   },
   {
@@ -38,7 +38,7 @@ const pillars = [
   {
     icon: ShieldCheck,
     title: "Clear from day one",
-    text: "We explain the process, the costs, and what to expect in plain language.",
+    text: "We explain the process, the costs and what to expect in plain language.",
   },
   {
     icon: GraduationCap,
@@ -71,7 +71,7 @@ export default function HomePage() {
           <div className="relative z-10 max-w-2xl motion-enter">
             <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm font-semibold text-lime-200">
               <Sparkles className="h-4 w-4 text-coral-300" />
-              South Africa to Russia, with people who've been there
+              Your Pathway to Russia, with people who've been there
             </div>
 
             <h1 className="heading-xl mb-6 text-balance text-white">
@@ -79,9 +79,9 @@ export default function HomePage() {
               <span className="text-coral-300">here.</span>
             </h1>
             <p className="mb-9 max-w-xl text-lg leading-relaxed text-slate-200 sm:text-xl">
-              We&apos;re Russia-trained South African professionals helping you
-              find your study path, get application-ready, and feel prepared
-              for your next chapter.
+              We&apos;re Russia-trained professionals helping you find your
+              study path, get application-ready and feel prepared for your next
+              chapter.
             </p>
 
             <div className="flex flex-col gap-3 sm:flex-row">
@@ -148,7 +148,6 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-
       </section>
 
       <section className="bg-cream-50 py-20 lg:py-28">
@@ -207,7 +206,7 @@ export default function HomePage() {
                 <span className="flex h-10 w-10 items-center justify-center rounded-full bg-lime-300 text-ink-950">
                   <Users className="h-5 w-5" />
                 </span>
-                Russia-trained South African professionals
+                Russia-trained African and Russian professionals
               </div>
             </div>
           </div>
@@ -219,10 +218,10 @@ export default function HomePage() {
             </h2>
             <div className="mt-6 space-y-4 text-lg leading-relaxed text-ink-700">
               <p>
-                Global Certify is a South African agency supporting students
-                who want to study in Russia. Our team brings first-hand
-                experience of both systems and a shared commitment to clear,
-                personal guidance.
+                Global Certify is a South African agency supporting students who
+                want to study in Russia. Our team brings first-hand experience
+                of both systems and a shared commitment to clear, personal
+                guidance.
               </p>
               <p>
                 From your first question to your first days on campus, we help
@@ -280,7 +279,8 @@ export default function HomePage() {
               Let&apos;s talk about your Russia study plans.
             </h2>
             <p className="mt-3 max-w-xl text-ink-900">
-              Bring your questions, your big plans, and yes—even the nervous
+              Bring your questions, your big plans and{" "}
+              <span className="paint-highlight">YES</span> even the nervous
               ones. We&apos;re here for all of it.
             </p>
           </div>

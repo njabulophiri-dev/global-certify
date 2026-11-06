@@ -2,9 +2,7 @@ import {
   GraduationCap,
   Stethoscope,
   Cpu,
-  Brain,
   Radio,
-  Plane,
   Scale,
   Languages,
   Users,
@@ -19,6 +17,22 @@ const team = [
     description:
       "A speaker, strategic leader, and youth transformation advocate; a featured presenter on IT and digitalisation at the World Youth Festival 2026 in Yekaterinburg. He builds bridges — between nations, systems, and ambitious young people.",
     color: "bg-gold-100 text-gold-700",
+  },
+  {
+    name: "Seipone Mohale",
+    role: "Chairperson",
+    icon: Users,
+    description:
+      "Seipone studied Mechatronics and Robotics in Russia and currently works as an engineering project manager. [Add a sentence about Seipone's leadership priorities or vision for Global Certify.]",
+    color: "bg-green-100 text-green-700",
+  },
+  {
+    name: "Mxolisi Nomdletshe",
+    role: "Institution Coordinator (Learning and Development)",
+    icon: GraduationCap,
+    description:
+      "Mxolisi coordinates institutional learning and development, helping build effective partnerships and create opportunities for students to learn, grow, and succeed.",
+    color: "bg-indigo-100 text-indigo-700",
   },
   {
     name: "Neo Kgotlagomang",
@@ -50,6 +64,7 @@ const team = [
     description: `Electrical Engineer (Russia). Career guidance, ECSA pathway advising, school outreach. From circuit theory to professional registration — he's mapped the route.`,
     color: "bg-orange-100 text-orange-700",
   },
+  /*
   {
     name: "Dr Phinda Dlamini",
     role: "Head of Student Wellness",
@@ -58,6 +73,7 @@ const team = [
       "Clinical Psychologist (Russia). President of the Eswatini Psychology Association. Mental health screening, in-country check-ins, crisis support. Because thriving academically starts with being well personally.",
     color: "bg-pink-100 text-pink-700",
   },
+  */
   {
     name: "Ionna Panferova",
     role: "Head of Strategic Communications & Media Relations",
@@ -66,6 +82,7 @@ const team = [
       "Former RT Producer, BRICS TV Senior Reporter. Communications strategy, media relations, embassy liaison. The voice that ensures your story — and ours — is told accurately.",
     color: "bg-indigo-100 text-indigo-700",
   },
+  /*
   {
     name: "Curly Girl",
     role: "Student Support & Logistics Coordinator",
@@ -73,6 +90,7 @@ const team = [
     description: `RUDN Graduate. Airport pickups, migration registration, in-country logistics. The first friendly face you'll see when you land — and the person who makes sure your paperwork doesn't become a paperweight.`,
     color: "bg-teal-100 text-teal-700",
   },
+  */
 ];
 
 export default function TeamPage() {
@@ -107,9 +125,11 @@ export default function TeamPage() {
                     <p className="text-sm font-medium text-gold-600 mb-3">
                       {member.role}
                     </p>
-                    <p className="text-sm text-navy-600 leading-relaxed">
-                      {member.description}
-                    </p>
+                    {member.description && (
+                      <p className="text-sm text-navy-600 leading-relaxed">
+                        {member.description}
+                      </p>
+                    )}
                   </div>
                 </div>
               </div>

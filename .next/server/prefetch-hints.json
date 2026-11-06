@@ -73,6 +73,20 @@
       }
     }
   },
+  "/pricing": {
+    "hints": 0,
+    "slots": {
+      "children": {
+        "hints": 64,
+        "slots": {
+          "children": {
+            "hints": 160,
+            "slots": null
+          }
+        }
+      }
+    }
+  },
   "/scholarships": {
     "hints": 0,
     "slots": {

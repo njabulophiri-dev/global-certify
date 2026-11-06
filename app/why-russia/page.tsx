@@ -1,4 +1,11 @@
-import { Award, Wallet, Globe, Briefcase, Gift, GraduationCap } from "lucide-react";
+import {
+  Award,
+  Wallet,
+  Globe,
+  Briefcase,
+  Gift,
+  GraduationCap,
+} from "lucide-react";
 import PageHero from "@/components/PageHero";
 
 const benefits = [
@@ -30,7 +37,7 @@ const benefits = [
     icon: Gift,
     title: "Scholarship opportunities",
     description:
-      "South African students can apply for the Russian Government Quota scholarship. We guide you through eligibility, documents and application steps.",
+      "Students from qualifying countries can apply for the Russian Government Quota scholarship. We guide you through eligibility, documents and application steps.",
   },
 ];
 
@@ -53,7 +60,7 @@ const faqs = [
   {
     question: "How do I plan for safety and support?",
     answer:
-      "Use current official travel advice, university guidance, and local emergency contacts when planning. Our team provides practical arrival and in-country support.",
+      "Use current official travel advice, university guidance and local emergency contacts when planning. Our team provides practical arrival and in-country support.",
   },
 ];
 
@@ -64,7 +71,7 @@ export default function WhyRussiaPage() {
         eyebrow="Why Russia"
         icon={GraduationCap}
         title="Build your future through a world-class education in Russia."
-        description="Explore academic programmes, experience a rich cultural heritage and gain an international perspective. We help South African students plan their studies in Russia with clear, personal guidance."
+        description="Explore academic programmes, experience a rich cultural heritage and gain an international perspective. We help students from all over the world plan their studies in Russia with clear, personal guidance."
       />
 
       {/* Study opportunities */}

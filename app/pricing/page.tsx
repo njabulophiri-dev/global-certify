@@ -43,10 +43,10 @@ const tiers = [
     price: "R8,500",
     subtitle: "One-time fee",
     bestFor:
-      "Students who want end-to-end support — from application to arrival",
+      "Students who want end-to-end support. From application to arrival",
     features: [
       "Everything in Application Support",
-      "University matching — we help you choose the right fit",
+      "University matching. We help you choose the right fit",
       "Scholarship application support (Russian Government Quota)",
       "Visa application guidance & document preparation",
       "Pre-departure orientation (1-hour session)",
@@ -70,7 +70,7 @@ const tiers = [
     price: "R14,000",
     subtitle: "One-time fee",
     bestFor:
-      "Students who want everything — full support from start to graduation",
+      "Students who want everything. Full support from start to graduation",
     features: [
       "Everything in Full Placement",
       "1-on-1 career matching session (Dr Siya / Elvis)",
@@ -213,11 +213,11 @@ const faqs = [
   },
   {
     q: "Are these fees in addition to university tuition?",
-    a: "Yes. These are our service fees. Tuition is paid directly to the university (or through your scholarship). We can help you understand tuition costs — just ask.",
+    a: "Yes. These are our service fees. Tuition is paid directly to the university (or through your scholarship). We can help you understand tuition costs.",
   },
   {
     q: "Do you offer scholarships?",
-    a: "Yes. We help students apply for the Russian Government Scholarship (Quota) — at no cost to the student.",
+    a: "Yes. We help students apply for the Russian Government Scholarship (Quota).",
   },
   {
     q: "What's an SLA?",
@@ -232,7 +232,7 @@ export default function PricingPage() {
         eyebrow="Pricing"
         icon={CreditCard}
         title="Transparent. Fair. No Hidden Fees."
-        description="We publish everything. Every rand. Every service. Every expectation. Some agencies have hidden fees. We have hidden nothing. Try us."
+        description="See what each service costs before you get started. Choose the support you need with clear pricing from day one."
       />
 
       {/* Tier Cards */}
@@ -471,7 +471,8 @@ export default function PricingPage() {
               Government & Corporate Packages
             </h2>
             <p className="body-lg mt-2">
-              For DHET, universities, or organisations sending students in bulk.
+              For Government departments, universities or organisations sending
+              students in groups.
             </p>
           </div>
 
@@ -492,8 +493,8 @@ export default function PricingPage() {
             ))}
           </div>
           <p className="text-center text-sm text-navy-500 mt-8">
-            All government packages include transparent cost breakdowns. No
-            hidden fees.
+            Every package comes with clear, itemized pricing and our team's
+            support from start to finish.
           </p>
         </div>
       </section>
@@ -563,8 +564,8 @@ export default function PricingPage() {
                 ))}
               </div>
               <p className="text-sm text-navy-500 mt-4 italic">
-                We don&apos;t collect money and disappear. We collect
-                accountability and stay.
+                Every payment begins a committed partnership, with clear
+                communication, accountability and support at every stage.
               </p>
             </div>
           </div>
@@ -604,8 +605,7 @@ export default function PricingPage() {
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="heading-lg text-white mb-6">Ready to Start?</h2>
             <p className="text-lg text-navy-200 leading-relaxed mb-10">
-              Some agencies hand you a ticket and wave goodbye. We hand you a
-              plan and stay.
+              A clear plan, steady guidance and support from start to finish.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link href="/contact" className="btn-primary w-full sm:w-auto">

@@ -2,11 +2,12 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Menu, X, Globe } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const navLinks = [
-  { href: "/", label: "About Us" },
+  { href: "/about", label: "About Us" },
   { href: "/why-russia", label: "Why Russia" },
   { href: "/services", label: "Services" },
   { href: "/pricing", label: "Pricing" },
@@ -26,9 +27,13 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-18 lg:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2.5 group">
-            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-lime-300 transition-transform duration-300 group-hover:rotate-12 group-hover:scale-105">
-              <Globe className="h-5 w-5 text-ink-950" />
-            </div>
+            <Image
+              src="/global-certify-logo-no-text.jpg"
+              alt="Global Certify"
+              width={48}
+              height={48}
+              className="h-11 w-11 rounded-full bg-white object-contain p-0.5 transition-transform duration-300 group-hover:rotate-12 group-hover:scale-105"
+            />
             <div className="flex flex-col">
               <span className="text-lg font-bold leading-tight text-white">
                 Global Certify

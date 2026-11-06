@@ -5,6 +5,7 @@
   "/contact/page": "app/contact/page.js",
   "/faq/page": "app/faq/page.js",
   "/page": "app/page.js",
+  "/pricing/page": "app/pricing/page.js",
   "/scholarships/page": "app/scholarships/page.js",
   "/services/page": "app/services/page.js",
   "/student-support/page": "app/student-support/page.js",

@@ -6,7 +6,10 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Global Certify | Study in Russia",
   description:
-    "South African professionals helping students plan their studies in Russia with clear guidance, lived experience, and personal support.",
+    "African and Russian professionals helping students plan their studies in Russia with clear guidance, lived experience and personal support.",
+  icons: {
+    icon: "/global-certify-logo-no-text.jpg",
+  },
 };
 
 export default function RootLayout({

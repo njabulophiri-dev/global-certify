@@ -14,7 +14,7 @@ const services = [
   {
     icon: FileCheck,
     title: "Application Support",
-    description: `Document verification, submission, admission letters — handled by people who've done it themselves. We know what universities actually want because we've been through the process.`,
+    description: `Document verification, submission and admission letters. Handled by people who've done it themselves. We know what universities actually want because we've been through the process.`,
     features: [
       "Document verification",
       "University application submission",
@@ -38,7 +38,7 @@ const services = [
     icon: Scale,
     title: "Visa & Legal",
     description:
-      "Invitation letters, contract review, POPIA compliance — the boring stuff, made simple. We handle the paperwork so you can focus on packing.",
+      "Invitation letters, contract review and POPIA compliance. The boring stuff, made simple. We handle the paperwork so you can focus on packing.",
     features: [
       "Invitation letters",
       "Contract review",
@@ -49,7 +49,7 @@ const services = [
   {
     icon: Plane,
     title: "Pre-Departure",
-    description: `Mental health screening, Russian language prep, cultural orientation — because "good luck" isn't a strategy. We prepare you for what's actually coming.`,
+    description: `Mental health screening, Russian language prep and cultural orientation. All because "good luck" isn't a strategy. We prepare you for what's actually coming.`,
     features: [
       "Mental health screening",
       "Russian language basics",
@@ -61,7 +61,7 @@ const services = [
     icon: HeartPulse,
     title: "In-Country Support",
     description:
-      "Airport pickup, migration registration, 24/7 support — we meet you where others send a PDF. You're never alone in a foreign country.",
+      "Airport pickup, migration registration and 24/7 support. We meet you where others send a PDF. You're never alone in a foreign country.",
     features: [
       "Airport pickup",
       "Migration registration",
@@ -73,7 +73,7 @@ const services = [
     icon: Briefcase,
     title: "Career Transition",
     description:
-      "ECSA, HPCSA guidance, study-to-work transition — from graduate to professional. Your degree is just the beginning.",
+      "ECSA, HPCSA guidance and study-to-work transition. From graduate to professional. Your degree is just the beginning.",
     features: [
       "ECSA pathway guidance",
       "HPCSA registration support",
@@ -145,7 +145,7 @@ export default function ServicesPage() {
             </h2>
             <p className="body-lg mb-8">
               That&apos;s exactly why we offer free consultations. Tell us where
-              you are, and we&apos;ll map the route.
+              you are and we&apos;ll map the route.
             </p>
             <Link href="/contact" className="btn-secondary">
               Book a Free Consultation

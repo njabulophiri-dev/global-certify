@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { ArrowUpRight, Globe, Mail, MapPin, Phone } from "lucide-react";
+import Image from "next/image";
+import { ArrowUpRight, Mail, MapPin, Phone } from "lucide-react";
 
 const footerLinks = {
   students: [
@@ -15,7 +16,7 @@ const footerLinks = {
     { label: "In-Country Support", href: "/services" },
   ],
   company: [
-    { label: "Our Story", href: "/" },
+    { label: "Our Story", href: "/about" },
     { label: "Meet the Team", href: "/team" },
     { label: "Contact", href: "/contact" },
   ],
@@ -49,19 +50,29 @@ export default function Footer() {
 
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-5 lg:gap-8">
           <div className="lg:col-span-2">
-            <Link href="/" className="group mb-6 inline-flex items-center gap-3">
-              <span className="flex h-11 w-11 items-center justify-center rounded-full bg-lime-300 text-ink-950 transition-transform duration-300 group-hover:rotate-12">
-                <Globe className="h-5 w-5" />
-              </span>
+            <Link
+              href="/"
+              className="group mb-6 inline-flex items-center gap-3"
+            >
+              <Image
+                src="/global-certify-logo-no-text.jpg"
+                alt="Global Certify"
+                width={48}
+                height={48}
+                className="h-11 w-11 rounded-full bg-white object-contain p-0.5 transition-transform duration-300 group-hover:rotate-12 group-hover:scale-105"
+              />
               <span className="text-xl font-bold">Global Certify</span>
             </Link>
             <p className="mb-6 max-w-sm text-sm leading-relaxed text-slate-300">
-              South African professionals helping students find their path to
-              studying in Russia—with first-hand experience and people in your
+              Russia-trained professionals helping students find their path to
+              studying in Russia with first-hand experience and people in your
               corner.
             </p>
             <div className="flex flex-col gap-3 text-sm">
-              <a href="mailto:info@globalcertify.com" className="footer-link gap-2">
+              <a
+                href="mailto:info@globalcertify.com"
+                className="footer-link gap-2"
+              >
                 <Mail className="h-4 w-4 text-coral-300" />
                 info@globalcertify.com
               </a>
@@ -87,7 +98,7 @@ export default function Footer() {
             reserved.
           </p>
           <p className="text-xs font-medium text-slate-400">
-            South Africa <span className="px-1 text-coral-300">↔</span> Russia
+            Africa <span className="px-1 text-coral-300">↔</span> Russia
           </p>
         </div>
       </div>
