@@ -20,18 +20,18 @@ const team = [
   },
   {
     name: "Seipone Mohale",
-    role: "Chairperson",
+    role: "Chief Operating Officer (COO)",
     icon: Users,
     description:
-      "Seipone studied Mechatronics and Robotics in Russia and currently works as an engineering project manager. [Add a sentence about Seipone's leadership priorities or vision for Global Certify.]",
+      "Mechatronics and Robotics Engineering (Russia), with experience in engineering project management. Focus on strategic operations, organisational development, process optimisation and cross-functional coordination. Bridging technical expertise with strategic leadership to drive operational excellence and sustainable organisational growth.",
     color: "bg-green-100 text-green-700",
   },
   {
     name: "Mxolisi Nomdletshe",
-    role: "Institution Coordinator (Learning and Development)",
+    role: "Institutional Coordinator (Learning and Development)",
     icon: GraduationCap,
     description:
-      "Mxolisi coordinates institutional learning and development, helping build effective partnerships and create opportunities for students to learn, grow, and succeed.",
+      "Master of Arts (MA) degree in Political Studies at Nelson Mandela University and is currently pursuing a PhD in International Relations at the University of Pretoria. His research interests are in Strategic Studies, with a particular focus on conflict resolution, international security and South Africa’s foreign policy. He also takes a great interest in driving global knowledge exchange through internationalisation of higher education.",
     color: "bg-indigo-100 text-indigo-700",
   },
   {
@@ -54,14 +54,16 @@ const team = [
     name: "Dr Siya Mahlangu",
     role: "Head of Medical Stream & Lead Presenter",
     icon: Stethoscope,
-    description: `Medical Doctor (Russia). Medical advising, clinical placement, HPCSA guidance, lead presenter. If you're pursuing medicine in Russia, Siya has already walked every corridor you'll walk.`,
+    description: `Medical Doctor (Russia). Medical advising, clinical placement, HPCSA guidance, lead presenter. A Phenomal Writer and Award Winning Author. 
+
+If you're pursuing medicine in Russia, Dr Siya has already walked every corridor you'll walk.`,
     color: "bg-red-100 text-red-700",
   },
   {
     name: "Elvis Xavier",
     role: "Head of Engineering Pathways",
     icon: Cpu,
-    description: `Electrical Engineer (Russia). Career guidance, ECSA pathway advising, school outreach. From circuit theory to professional registration — he's mapped the route.`,
+    description: `lectrical engineering professional with international education (Russia) and South African industry experience. Focused on engineering career development, ECSA pathways and nurturing future engineering talent.`,
     color: "bg-orange-100 text-orange-700",
   },
   /*
@@ -99,8 +101,8 @@ export default function TeamPage() {
       <PageHero
         eyebrow="Our Team"
         icon={Users}
-        title="Meet the people who&apos;ve actually done this."
-        description="Every member of our team has walked the path you&apos;re about to take. We don&apos;t just advise — we remember."
+        title="Meet the people who've actually done this."
+        description="Every member of our team has walked the path you're about to take. We don't just advise — we remember."
       />
 
       {/* Team Grid */}
