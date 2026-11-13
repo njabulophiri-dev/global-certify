@@ -9,22 +9,25 @@ import {
   HelpCircle,
 } from "lucide-react";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import PageHero from "@/components/PageHero";
+import { showPricing } from "@/lib/site-config";
 
 const tiers = [
   {
-    name: "Application Support",
+    name: "Essential Admission Support",
     price: "R4,500",
     subtitle: "One-time fee",
-    bestFor: "Students who know their university and just need help getting in",
+    bestFor:
+      "Students who already know the pathway and need focused application support",
     features: [
-      "Document verification & translation (Matric, ID, transcripts)",
-      "University application submission (up to 2 universities)",
-      "Admission letter processing",
-      "Invitation letter (visa support document)",
-      "Basic email/WhatsApp support",
+      "Document review, verification & translation (Matric, ID, transcripts)",
+      "University application submission (up to 2 institutions)",
+      "Admission letter processing and follow-up",
+      "Invitation letter preparation for visa documentation",
+      "Dedicated application tracking and response coordination",
       "Service Level Agreement (SLA)",
-      "Academic verification by our Russia-trained experts",
+      "Academic review by our Russia-trained specialists",
     ],
     notIncluded: [
       "University matching",
@@ -39,19 +42,18 @@ const tiers = [
     popular: false,
   },
   {
-    name: "Full Placement",
-    price: "R8,500",
+    name: "Global Placement",
+    price: "R9,500",
     subtitle: "One-time fee",
-    bestFor:
-      "Students who want end-to-end support. From application to arrival",
+    bestFor: "Students who want guided support from application to arrival",
     features: [
-      "Everything in Application Support",
-      "University matching. We help you choose the right fit",
+      "Everything in Essential Admission Support",
+      "University matching and fit assessment",
       "Scholarship application support (Russian Government Quota)",
-      "Visa application guidance & document preparation",
-      "Pre-departure orientation (1-hour session)",
+      "Visa guidance, document preparation & submission support",
+      "Pre-departure orientation and planning session",
       "Russian basics course (4 sessions with Irina)",
-      "Airport pickup upon arrival in Russia",
+      "Airport pickup on arrival in Russia",
       "Migration registration support",
       "30-day in-country WhatsApp support",
     ],
@@ -62,27 +64,26 @@ const tiers = [
       "24/7 emergency support",
       "Career transition guidance",
     ],
-    cta: "Most Popular — Get Started",
+    cta: "Most Popular. Get Started",
     popular: true,
   },
   {
-    name: "Premium",
-    price: "R14,000",
+    name: "Priority Placement",
+    price: "R16,000",
     subtitle: "One-time fee",
-    bestFor:
-      "Students who want everything. Full support from start to graduation",
+    bestFor: "Students who want high-touch guidance and priority support",
     features: [
-      "Everything in Full Placement",
-      "1-on-1 career matching session (Dr Siya / Elvis)",
+      "Everything in Global Placement",
+      "1-on-1 career and study-path guidance (Dr Siya / Elvis)",
       "Mental health pre-departure screening (Dr Phinda)",
       "Russian language course (8 sessions with Irina)",
-      "Cultural orientation (what to expect in Russia)",
-      "Contract review (legal review of your university agreement)",
-      "12-month in-country mentorship (monthly check-ins)",
-      "24/7 emergency support",
-      "Study-to-work transition guidance (upon graduation)",
-      "ECSA/HPCSA accreditation guidance (returning to SA)",
-      "Priority support",
+      "Cultural orientation and settling-in guidance",
+      "Contract review for your university offer and study agreement",
+      "12-month in-country mentorship with monthly check-ins",
+      "24/7 emergency support channel",
+      "Study-to-work transition support upon graduation",
+      "ECSA/HPCSA accreditation guidance for returning graduates",
+      "Priority response and specialist access",
     ],
     notIncluded: [],
     cta: "Go Premium",
@@ -160,18 +161,21 @@ const addOns = [
 const govPackages = [
   {
     students: "5–10",
-    price: "R45,000",
+    price: "R9,000",
+    priceUnit: "per student",
     includes: "Full Premium package + monthly reporting to sponsor",
   },
   {
     students: "11–25",
-    price: "R40,000",
+    price: "R12,000",
+    priceUnit: "per student",
     includes: "Full Premium + dedicated account manager + quarterly reviews",
   },
   {
     students: "26+",
     price: "Negotiated",
-    includes: "Everything + bespoke support + on-site visits",
+    priceUnit: "custom cohort pricing",
+    includes: "Everything + bespoke support +\non-site visits",
   },
 ];
 
@@ -226,14 +230,40 @@ const faqs = [
 ];
 
 export default function PricingPage() {
+  if (!showPricing) {
+    notFound();
+  }
+
   return (
     <>
       <PageHero
         eyebrow="Pricing"
         icon={CreditCard}
-        title="Transparent. Fair. No Hidden Fees."
-        description="See what each service costs before you get started. Choose the support you need with clear pricing from day one."
+        title="Premium guidance. Fair pricing. Real outcomes."
+        description="Expert support for students who want clarity, accountability, and a smoother path to study abroad — without paying inflated agency markups for basic placement work."
       />
+
+      <section className="py-12 bg-gold-50 border-y border-gold-100">
+        <div className="container-custom">
+          <div className="max-w-4xl mx-auto text-center">
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-gold-700 mb-3">
+              Why our pricing works
+            </p>
+            <h2 className="heading-sm text-navy-900 mb-4">
+              Clear pricing. Serious support. Real value.
+            </h2>
+            <p className="body-lg text-navy-700 max-w-3xl mx-auto">
+              Basic placement support should never feel inflated or opaque. At
+              Global Certify, we price our services around the real value we
+              provide: expert guidance, documentation support, visa preparation,
+              and a structured journey from application to arrival. Our pricing
+              is straightforward, professional, and designed for students who
+              want reliable support without paying for vague add-ons or
+              unnecessary overhead.
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* Tier Cards */}
       <section className="py-16 lg:py-24 bg-white">
@@ -461,40 +491,66 @@ export default function PricingPage() {
       </section>
 
       {/* Government Packages */}
-      <section className="py-16 lg:py-24 bg-white">
+      <section className="py-16 lg:py-24 bg-navy-50">
         <div className="container-custom">
           <div className="text-center mb-14">
-            <span className="text-sm font-semibold uppercase tracking-wider text-gold-600 mb-2 block">
-              Bulk
+            <span className="text-sm font-semibold uppercase tracking-[0.18em] text-gold-600 mb-3 block">
+              Institutional partnerships
             </span>
             <h2 className="heading-md text-navy-900">
               Government & Corporate Packages
             </h2>
-            <p className="body-lg mt-2">
-              For Government departments, universities or organisations sending
-              students in groups.
+            <p className="body-lg mt-3 max-w-2xl mx-auto">
+              A considered, coordinated study-abroad experience for departments,
+              universities and organisations supporting student cohorts.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            {govPackages.map((pkg, index) => (
-              <div key={index} className="card p-8 text-center">
-                <div className="text-3xl font-bold text-navy-900 mb-1">
-                  {pkg.students}
+          <div className="text-center mb-5">
+            <span className="inline-flex rounded-full bg-gold-500 px-4 py-1 text-xs font-bold uppercase tracking-wider text-navy-950">
+              Cohort rate
+            </span>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-5xl mx-auto">
+            {govPackages.map((pkg) => (
+              <div
+                key={pkg.students}
+                className="flex flex-col rounded-2xl border border-navy-100 bg-white p-7 lg:p-8 text-center shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-lg"
+              >
+                <div className="mb-6">
+                  <div className="text-xs font-semibold uppercase tracking-[0.16em] text-navy-400 mb-2">
+                    Cohort size
+                  </div>
+                  <div className="text-4xl font-bold tracking-tight text-navy-900">
+                    {pkg.students}
+                  </div>
+                  <div className="text-sm text-navy-500 mt-1">students</div>
                 </div>
-                <div className="text-sm text-navy-500 mb-4">students</div>
-                <div className="text-2xl font-bold text-gold-600 mb-4">
-                  {pkg.price}
+                <div className="border-y border-navy-100 py-6 mb-6">
+                  <div className="text-3xl font-bold tracking-tight text-gold-700">
+                    {pkg.price}
+                  </div>
+                  <div className="text-sm font-medium text-navy-500 mt-1">
+                    {pkg.priceUnit}
+                  </div>
                 </div>
-                <p className="text-sm text-navy-600 leading-relaxed">
+                <p className="text-sm text-navy-600 leading-relaxed flex-1 whitespace-pre-line">
                   {pkg.includes}
                 </p>
+                <Link
+                  href="/contact"
+                  className="btn-outline mt-7 w-full justify-center"
+                >
+                  Discuss your cohort
+                  <ArrowRight className="w-4 h-4 ml-2 inline" />
+                </Link>
               </div>
             ))}
           </div>
           <p className="text-center text-sm text-navy-500 mt-8">
-            Every package comes with clear, itemized pricing and our team's
-            support from start to finish.
+            Per-student rates are shown for cohorts of 5 or more. Contact us to
+            discuss requirements and a tailored proposal for 26+ students.
           </p>
         </div>
       </section>
@@ -605,7 +661,9 @@ export default function PricingPage() {
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="heading-lg text-white mb-6">Ready to Start?</h2>
             <p className="text-lg text-navy-200 leading-relaxed mb-10">
-              A clear plan, steady guidance and support from start to finish.
+              Choose a package that matches your goals and get clear, expert
+              guidance from application to arrival — without paying inflated
+              agency markups for basic support.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link href="/contact" className="btn-primary w-full sm:w-auto">

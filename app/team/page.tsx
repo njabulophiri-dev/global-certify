@@ -5,6 +5,8 @@ import {
   Radio,
   Scale,
   Users,
+  Wheat,
+  Handshake,
 } from "lucide-react";
 import PageHero from "@/components/PageHero";
 
@@ -79,6 +81,33 @@ const team = [
     description:
       "Yana holds degrees in Media from Southern Federal University (SFedU) and the Higher School of Economics (HSE). She has built a robust career as a correspondent and TV presenter for major networks including Vmeste RF, Russia 24 and TV BRICS. She currently serves as a producer at RT International and is a distinguished member of the Union of Journalists of Russia. Yana brings world-class expertise in global broadcasting, international relations and cross-cultural media to the Global Certify team.",
     color: "bg-indigo-100 text-indigo-700",
+  },
+  {
+    id: "nomathemba-dube",
+    name: "Nomathemba Dube",
+    role: "Student Support & Advocacy Lead",
+    icon: Users,
+    description:
+      "Nomathemba is a geology graduate and DHET scholarship recipient currently pursuing a Master’s degree in Geology in Russia. She has represented South Africa in Russia, was a finalist in a geology competition, and participated in the 2026 World Youth Forum. As Global Certify’s on-the-ground student representative, she will help voice student concerns and strengthen the support they receive.",
+    color: "bg-teal-100 text-teal-700",
+  },
+  {
+    id: "sikelela-mgalagala",
+    name: "Sikelela Mgalagala",
+    role: "Agroprocessing & Industry Partnerships Lead",
+    icon: Wheat,
+    description:
+      "Sikelela holds a Master’s degree in Agroprocessing from Belarus and has recently attended agroprocessing conferences in China. Active in Russia, he has helped pioneer youth development and cultural exchange. He brings together agroprocessing expertise and international experience to support industry partnerships.",
+    color: "bg-amber-100 text-amber-700",
+  },
+  {
+    id: "malaika-ntutela",
+    name: "Malaika Ntutela",
+    role: "Social Impact & Diplomatic Partnerships Lead",
+    icon: Handshake,
+    description:
+      "Malaika is an agroprocessing entrepreneur and a Master’s student in Italy. She is committed to creating positive social impact and is actively involved in building and maintaining relationships with several embassies. Her work brings together entrepreneurship, international engagement, and community-focused impact.",
+    color: "bg-pink-100 text-pink-700",
   },
 ];
 

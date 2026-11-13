@@ -5,12 +5,13 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
+import { showPricing } from "@/lib/site-config";
 
 const navLinks = [
   { href: "/about", label: "About Us" },
   { href: "/why-russia", label: "Why Russia" },
   { href: "/services", label: "Services" },
-  { href: "/pricing", label: "Pricing" },
+  ...(showPricing ? [{ href: "/pricing", label: "Pricing" }] : []),
   { href: "/scholarships", label: "Scholarships" },
   { href: "/team", label: "Team" },
   { href: "/student-support", label: "Student Support" },
